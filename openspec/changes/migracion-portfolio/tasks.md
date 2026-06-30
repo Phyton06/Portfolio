@@ -36,9 +36,9 @@ Chain strategy: pending
 
 ## Phase 2: Content Collections & Project Data
 
-- [ ] 2.1 `src/content/config.ts` — Zod schema per spec (title, description, tags, techStack, images, featured, etc.)
-- [ ] 2.2 6 MDX files in `src/content/projects/`: taskflow, cloudrover, synthai, datamesh, neodeploy, pysec
-- [ ] 2.3 `pnpm build` — confirm Zod validation passes, no errors
+- [x] 2.1 `src/content/config.ts` — Zod schema per spec (title, description, tags, techStack, images, featured, etc.)
+- [x] 2.2 6 MDX files in `src/content/projects/`: taskflow, cloudrover, synthai, datamesh, neodeploy, pysec
+- [x] 2.3 `pnpm build` — confirm Zod validation passes, no errors
 
 ## Phase 3: Home Page
 
