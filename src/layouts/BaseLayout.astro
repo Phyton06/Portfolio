@@ -10,7 +10,7 @@ const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="es" data-theme="midnight">
+<html lang="es" data-theme="midnight" data-font-size="100" data-animations="play" data-underline="false" data-reduced-transparency="false" data-ruler="false" data-large-cursor="false" data-colorblind="false">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,6 +27,23 @@ const { title } = Astro.props;
         try {
           var t = localStorage.getItem('theme');
           if (t) document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+
+        // Restore a11y preferences
+        var prefs = [
+          ['phyton-font-size', 'data-font-size'],
+          ['phyton-animations', 'data-animations'],
+          ['phyton-underline', 'data-underline'],
+          ['phyton-transparency', 'data-reduced-transparency'],
+          ['phyton-ruler', 'data-ruler'],
+          ['phyton-cursor', 'data-large-cursor'],
+          ['phyton-colorblind', 'data-colorblind'],
+        ];
+        try {
+          prefs.forEach(function (p) {
+            var v = localStorage.getItem(p[0]);
+            if (v) document.documentElement.setAttribute(p[1], v);
+          });
         } catch (e) {}
       })();
     </script>
@@ -47,5 +64,11 @@ const { title } = Astro.props;
     </main>
 
     <slot name="footer" />
+
+    <access-panel />
   </body>
 </html>
+
+<script>
+  import '../islands/AccessPanel';
+</script>
