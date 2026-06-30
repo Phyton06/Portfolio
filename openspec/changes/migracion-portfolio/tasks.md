@@ -64,4 +64,4 @@ Chain strategy: pending
 
 ## Phase 6: Cleanup
 
-- [ ] 6.1 Delete legacy HTML files after confirming `/dist` replaces all routes
+- [x] 6.1 Delete legacy HTML files after confirming `/dist` replaces all routes
