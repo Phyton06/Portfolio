@@ -28,11 +28,11 @@ Chain strategy: pending
 
 ## Phase 1: Foundation & Theme System
 
-- [ ] 1.1 Scaffold Astro 5: `package.json`, `astro.config.mjs` (static), `tsconfig.json`
-- [ ] 1.2 `src/styles/theme.css` — `@layer base` with 6 `[data-theme]` oklch blocks + `@custom-variant`
-- [ ] 1.3 `src/layouts/BaseLayout.astro` — HTML shell, `<ViewTransitions />`, skip link, ARIA live
-- [ ] 1.4 `src/components/Nav.astro` + `src/components/Footer.astro` (static shells)
-- [ ] 1.5 Inline script in BaseLayout head: read localStorage theme before paint (anti-FOUC)
+- [x] 1.1 Scaffold Astro 5: `package.json`, `astro.config.mjs` (static), `tsconfig.json`
+- [x] 1.2 `src/styles/theme.css` — `@layer base` with 6 `[data-theme]` oklch blocks + `@custom-variant`
+- [x] 1.3 `src/layouts/BaseLayout.astro` — HTML shell, `<ViewTransitions />`, skip link, ARIA live
+- [x] 1.4 `src/components/Nav.astro` + `src/components/Footer.astro` (static shells)
+- [x] 1.5 Inline script in BaseLayout head: read localStorage theme before paint (anti-FOUC)
 
 ## Phase 2: Content Collections & Project Data
 

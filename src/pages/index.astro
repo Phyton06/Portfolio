@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Phyton06 — Portafolio de desarrollo">
+  <Fragment slot="nav"><Nav /></Fragment>
+
+  <section class="mx-auto max-w-5xl px-4 py-20 text-center">
+    <h1 class="text-4xl font-bold md:text-5xl">
+      Hola, soy <span class="text-primary">Phyton06</span>
+    </h1>
+    <p class="mt-4 text-lg text-muted max-w-2xl mx-auto">
+      Desarrollador full-stack. Construyo aplicaciones web accesibles, performantes y con diseño
+      cuidado.
+    </p>
+    <div class="mt-8 flex justify-center gap-4">
+      <a
+        href="/projects"
+        class="inline-block rounded-lg bg-primary px-6 py-3 font-semibold text-bg no-underline hover:opacity-90 transition-opacity"
+      >
+        Ver proyectos
+      </a>
+      <a
+        href="/cv.pdf"
+        target="_blank"
+        class="inline-block rounded-lg border border-primary px-6 py-3 font-semibold text-primary no-underline hover:bg-primary hover:text-bg transition-colors"
+      >
+        Descargar CV
+      </a>
+    </div>
+  </section>
+
+  <Fragment slot="footer"><Footer /></Fragment>
+</BaseLayout>

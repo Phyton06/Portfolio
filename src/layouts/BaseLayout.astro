@@ -1,0 +1,51 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import '../styles/theme.css';
+
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es" data-theme="midnight">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio de Phyton06 — proyectos de desarrollo full-stack" />
+    <title>{title}</title>
+    <ClientRouter />
+
+    {/*
+      Anti-FOUC: reads localStorage BEFORE paint to override default theme.
+      Inlined in <head> for zero-delay execution.
+    */}
+    <script is:inline>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (t) document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <!-- Skip link — first focusable element -->
+    <a href="#main-content" class="skip-link">
+      Saltar al contenido principal
+    </a>
+
+    <!-- ARIA live region for announcements -->
+    <div id="announcements" aria-live="polite" aria-atomic="true"></div>
+
+    <slot name="nav" />
+
+    <main id="main-content">
+      <slot />
+    </main>
+
+    <slot name="footer" />
+  </body>
+</html>
