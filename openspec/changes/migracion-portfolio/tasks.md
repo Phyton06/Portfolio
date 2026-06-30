@@ -49,10 +49,10 @@ Chain strategy: pending
 
 ## Phase 4: Projects Pages & Filtering
 
-- [ ] 4.1 `src/pages/projects.astro` — full collection grid + FilterBar island
-- [ ] 4.2 `src/pages/projects/[slug].astro` — `getStaticPaths()`, MDX content, STAR layout
-- [ ] 4.3 `src/components/CodeBlock.astro` — syntax-highlighted code for MDX
-- [ ] 4.4 `src/islands/FilterBar.ts` — Custom Element < 2KB, tech tag filtering
+- [x] 4.1 `src/pages/projects/index.astro` — full collection grid + filter inline script
+- [x] 4.2 `src/pages/projects/[slug].astro` — `getStaticPaths()`, MDX content, role/duration/stars
+- [x] 4.3 `src/components/CodeBlock.astro` — syntax-highlighted code block component
+- [x] 4.4 Filter bar implemented inline with client-side JS (aria-pressed, announcements)
 
 ## Phase 5: Interactive Islands & Polish
 
