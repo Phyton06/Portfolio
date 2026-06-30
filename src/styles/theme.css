@@ -14,79 +14,81 @@
 /* ── Theme color blocks ── */
 @layer base {
   :root {
-    --color-bg: oklch(0.15 0.02 250);
-    --color-surface: oklch(0.2 0.025 250);
-    --color-text: oklch(0.95 0.01 250);
-    --color-primary: oklch(0.65 0.15 250);
-    --color-secondary: oklch(0.55 0.12 200);
-    --color-accent: oklch(0.7 0.18 180);
-    --color-muted: oklch(0.4 0.03 250);
+    --bg: oklch(0.15 0.02 250);
+    --surface: oklch(0.2 0.025 250);
+    --fg: oklch(0.95 0.01 250);
+    --primary: oklch(0.65 0.15 250);
+    --secondary: oklch(0.55 0.12 200);
+    --accent: oklch(0.7 0.18 180);
+    --muted: oklch(0.4 0.03 250);
+    --border: var(--muted);
+    --fg-muted: var(--muted);
   }
 
   [data-theme="midnight"] {
-    --color-bg: oklch(0.13 0.025 260);
-    --color-surface: oklch(0.18 0.03 260);
-    --color-text: oklch(0.93 0.015 260);
-    --color-primary: oklch(0.65 0.15 260);
-    --color-secondary: oklch(0.55 0.12 230);
-    --color-accent: oklch(0.7 0.16 200);
-    --color-muted: oklch(0.38 0.03 260);
+    --bg: oklch(0.13 0.025 260);
+    --surface: oklch(0.18 0.03 260);
+    --fg: oklch(0.93 0.015 260);
+    --primary: oklch(0.65 0.15 260);
+    --secondary: oklch(0.55 0.12 230);
+    --accent: oklch(0.7 0.16 200);
+    --muted: oklch(0.38 0.03 260);
   }
 
   [data-theme="sunset"] {
-    --color-bg: oklch(0.14 0.03 40);
-    --color-surface: oklch(0.19 0.035 40);
-    --color-text: oklch(0.93 0.02 40);
-    --color-primary: oklch(0.7 0.18 40);
-    --color-secondary: oklch(0.6 0.14 30);
-    --color-accent: oklch(0.75 0.18 80);
-    --color-muted: oklch(0.4 0.04 40);
+    --bg: oklch(0.14 0.03 40);
+    --surface: oklch(0.19 0.035 40);
+    --fg: oklch(0.93 0.02 40);
+    --primary: oklch(0.7 0.18 40);
+    --secondary: oklch(0.6 0.14 30);
+    --accent: oklch(0.75 0.18 80);
+    --muted: oklch(0.4 0.04 40);
   }
 
   [data-theme="forest"] {
-    --color-bg: oklch(0.14 0.025 150);
-    --color-surface: oklch(0.19 0.03 150);
-    --color-text: oklch(0.93 0.015 150);
-    --color-primary: oklch(0.6 0.16 150);
-    --color-secondary: oklch(0.55 0.12 120);
-    --color-accent: oklch(0.7 0.16 100);
-    --color-muted: oklch(0.4 0.03 150);
+    --bg: oklch(0.14 0.025 150);
+    --surface: oklch(0.19 0.03 150);
+    --fg: oklch(0.93 0.015 150);
+    --primary: oklch(0.6 0.16 150);
+    --secondary: oklch(0.55 0.12 120);
+    --accent: oklch(0.7 0.16 100);
+    --muted: oklch(0.4 0.03 150);
   }
 
   [data-theme="ocean"] {
-    --color-bg: oklch(0.13 0.025 220);
-    --color-surface: oklch(0.18 0.03 220);
-    --color-text: oklch(0.93 0.015 220);
-    --color-primary: oklch(0.6 0.15 230);
-    --color-secondary: oklch(0.55 0.12 200);
-    --color-accent: oklch(0.72 0.16 190);
-    --color-muted: oklch(0.38 0.03 220);
+    --bg: oklch(0.13 0.025 220);
+    --surface: oklch(0.18 0.03 220);
+    --fg: oklch(0.93 0.015 220);
+    --primary: oklch(0.6 0.15 230);
+    --secondary: oklch(0.55 0.12 200);
+    --accent: oklch(0.72 0.16 190);
+    --muted: oklch(0.38 0.03 220);
   }
 
   [data-theme="lavender"] {
-    --color-bg: oklch(0.14 0.03 300);
-    --color-surface: oklch(0.19 0.035 300);
-    --color-text: oklch(0.93 0.02 300);
-    --color-primary: oklch(0.65 0.18 310);
-    --color-secondary: oklch(0.55 0.14 290);
-    --color-accent: oklch(0.7 0.16 330);
-    --color-muted: oklch(0.4 0.04 300);
+    --bg: oklch(0.14 0.03 300);
+    --surface: oklch(0.19 0.035 300);
+    --fg: oklch(0.93 0.02 300);
+    --primary: oklch(0.65 0.18 310);
+    --secondary: oklch(0.55 0.14 290);
+    --accent: oklch(0.7 0.16 330);
+    --muted: oklch(0.4 0.04 300);
   }
 
   [data-theme="paper"] {
-    --color-bg: oklch(0.96 0.02 80);
-    --color-surface: oklch(0.92 0.015 80);
-    --color-text: oklch(0.18 0.02 80);
-    --color-primary: oklch(0.5 0.14 260);
-    --color-secondary: oklch(0.45 0.1 200);
-    --color-accent: oklch(0.55 0.14 180);
-    --color-muted: oklch(0.6 0.03 80);
+    --bg: oklch(0.96 0.02 80);
+    --surface: oklch(0.92 0.015 80);
+    --fg: oklch(0.18 0.02 80);
+    --primary: oklch(0.5 0.14 260);
+    --secondary: oklch(0.45 0.1 200);
+    --accent: oklch(0.55 0.14 180);
+    --muted: oklch(0.6 0.03 80);
   }
 
   /* ── Base element styles ── */
   html {
-    background-color: var(--color-bg);
-    color: var(--color-text);
+    background-color: var(--bg);
+    color: var(--fg);
     font-family: var(--font-sans);
     transition: var(--transition-theme);
   }
@@ -105,12 +107,12 @@
   }
 
   a {
-    color: var(--color-primary);
+    color: var(--primary);
     text-underline-offset: 2px;
   }
 
   a:hover {
-    color: var(--color-accent);
+    color: var(--accent);
   }
 
   /* ── Skip link (accessible) ── */
@@ -120,8 +122,8 @@
     inset-inline-start: 0.5rem;
     z-index: 9999;
     padding: 0.5rem 1rem;
-    background: var(--color-primary);
-    color: var(--color-bg);
+    background: var(--primary);
+    color: var(--bg);
     border-radius: var(--radius-md);
     font-weight: 600;
   }
@@ -154,7 +156,7 @@
   }
 
   [data-reduced-transparency="true"] nav {
-    background-color: var(--color-bg) !important;
+    background-color: var(--bg) !important;
     backdrop-filter: none !important;
   }
 
@@ -183,15 +185,15 @@
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 999px;
-    border: 1px solid var(--color-muted);
+    border: 1px solid var(--muted);
     background: transparent;
-    color: var(--color-text);
+    color: var(--fg);
     cursor: pointer;
     transition: all 0.2s;
   }
   .theme-toggle-btn:hover {
-    border-color: var(--color-accent);
-    color: var(--color-accent);
+    border-color: var(--accent);
+    color: var(--accent);
   }
 
   /* ── AccessPanel ── */
@@ -204,8 +206,8 @@
     height: 3.25rem;
     border-radius: 999px;
     border: none;
-    background: var(--color-accent);
-    color: var(--color-bg);
+    background: var(--accent);
+    color: var(--bg);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -228,10 +230,10 @@
     left: 0;
     right: 0;
     z-index: 9998;
-    background: var(--color-surface);
+    background: var(--surface);
     border-top-left-radius: var(--radius-xl);
     border-top-right-radius: var(--radius-xl);
-    border: 1px solid var(--color-muted);
+    border: 1px solid var(--muted);
     border-bottom: none;
     padding: 1.5rem;
     max-height: 80dvh;
@@ -246,7 +248,7 @@
       transform: translate(-50%, -50%);
       width: 400px;
       border-radius: var(--radius-xl);
-      border-bottom: 1px solid var(--color-muted);
+      border-bottom: 1px solid var(--muted);
     }
   }
   @keyframes slideUp {
@@ -269,9 +271,9 @@
     width: 2rem;
     height: 2rem;
     border-radius: 999px;
-    border: 1px solid var(--color-muted);
+    border: 1px solid var(--muted);
     background: transparent;
-    color: var(--color-text);
+    color: var(--fg);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -302,15 +304,15 @@
     text-align: center;
     padding: 0.5rem;
     border-radius: var(--radius-md);
-    border: 1px solid var(--color-muted);
+    border: 1px solid var(--muted);
     font-size: 0.875rem;
     cursor: pointer;
     transition: all 0.2s;
   }
   .font-size-option input:checked + span {
-    border-color: var(--color-accent);
-    background: var(--color-accent);
-    color: var(--color-bg);
+    border-color: var(--accent);
+    background: var(--accent);
+    color: var(--bg);
   }
 
   .switches {
@@ -330,7 +332,7 @@
     width: 2.5rem;
     height: 1.375rem;
     border-radius: 999px;
-    border: 1px solid var(--color-muted);
+    border: 1px solid var(--muted);
     background: transparent;
     cursor: pointer;
     position: relative;
@@ -344,16 +346,16 @@
     width: calc(1.375rem - 6px);
     height: calc(1.375rem - 6px);
     border-radius: 50%;
-    background: var(--color-muted);
+    background: var(--muted);
     transition: transform 0.2s, background 0.2s;
   }
   .switch-row input[type="checkbox"]:checked {
-    background: var(--color-accent);
-    border-color: var(--color-accent);
+    background: var(--accent);
+    border-color: var(--accent);
   }
   .switch-row input[type="checkbox"]:checked::after {
     transform: translateX(calc(1.125rem));
-    background: var(--color-bg);
+    background: var(--bg);
   }
 
   /* ── Screen reader only ── */
@@ -372,4 +374,17 @@
   /* ── Hidden utility ── */
   .hidden { display: none !important; }
 
+/* ── MDX prose ── */
+.prose-custom h2 { font-size: 1.25rem; font-weight: 700; margin: 1.5rem 0 0.5rem; color: var(--fg); }
+.prose-custom h3 { font-size: 1.1rem; font-weight: 600; margin: 1.25rem 0 0.5rem; color: var(--fg); }
+.prose-custom p { margin: 0.75rem 0; color: var(--fg-muted); line-height: 1.7; }
+.prose-custom ul { margin: 0.75rem 0; padding-left: 1.25rem; }
+.prose-custom li { margin: 0.25rem 0; color: var(--fg-muted); }
+.prose-custom strong { color: var(--fg); font-weight: 600; }
+.prose-custom code { font-family: var(--font-mono); font-size: 0.875em; padding: 0.125em 0.375em; border-radius: var(--radius-sm); background: var(--surface); color: var(--accent); }
+.prose-custom pre { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1rem; overflow-x: auto; }
+.prose-custom pre code { background: none; padding: 0; }
+.prose-custom hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.prose-custom a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+.prose-custom a:hover { opacity: 0.85; }
 
