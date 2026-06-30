@@ -1,0 +1,31 @@
+---
+title: "NeoDeploy"
+description: "Orquestador de despliegues zero-downtime con rollbacks automáticos, canary releases y health checks."
+tags: ["docker", "kubernetes", "go"]
+techStack:
+  - name: "Docker"
+    color: "#2496ED"
+  - name: "Kubernetes"
+    color: "#326CE5"
+  - name: "Go"
+    color: "#00ADD8"
+  - name: "Redis"
+    color: "#DC382D"
+images: []
+featured: false
+role: "Platform Engineer"
+duration: "4 meses"
+stars: 103
+commits: 376
+---
+
+## Resumen
+
+NeoDeploy es un orquestador de despliegues diseñado para equipos que necesitan releases frecuentes sin downtime. Soporta estrategias blue-green, canary y rolling updates.
+
+## Arquitectura
+
+- **Motor de despliegues**: Go con workers concurrentes
+- **Orquestación**: Kubernetes CRDs para definiciones de deploy
+- **Cache y estado**: Redis con persistencia
+- **CI/CD**: Integración nativa con GitHub Actions

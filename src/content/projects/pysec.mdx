@@ -1,0 +1,31 @@
+---
+title: "PySec Audit"
+description: "Scanner automatizado de seguridad para dependencias Python con reportes SBOM y alertas en CI/CD."
+tags: ["python", "docker", "aws"]
+techStack:
+  - name: "Python"
+    color: "#3776AB"
+  - name: "Docker"
+    color: "#2496ED"
+  - name: "AWS"
+    color: "#FF9900"
+  - name: "Trivy"
+    color: "#E53935"
+images: []
+featured: false
+role: "Security Engineer"
+duration: "3 meses"
+stars: 156
+commits: 298
+---
+
+## Resumen
+
+PySec Audit es una herramienta de seguridad especializada en ecosistemas Python. Escanea dependencias en busca de vulnerabilidades conocidas, genera reportes SBOM y bloquea pipelines inseguros.
+
+## Arquitectura
+
+- **Scanner**: Python con base de datos de vulnerabilidades actualizada
+- **Reportes**: Generación de SBOM en formato SPDX y CycloneDX
+- **Integración**: GitHub Actions, GitLab CI, Jenkins
+- **Infraestructura**: AWS Lambda + ECR para escaneo serverless
