@@ -1,0 +1,53 @@
+# openspec/config.yaml
+schema: spec-driven
+
+context: |
+  Tech stack: Static HTML5 + vanilla CSS3 + vanilla JavaScript. No framework,
+    no build system, no package manager. Hosted as flat files.
+  Architecture: Single-page-per-route (index.html, projects.html,
+    project-detail.html). All CSS inline in <style> blocks, all JS inline
+    in <script> blocks. Theme system via data-theme attribute on <html>.
+    Accessibility-first: skip links, ARIA, reading ruler, dyslexia font.
+    OKLCH color space for dynamic theming.
+    data-od-id attribute convention for element identification.
+  Language: Spanish (Rioplatense Argentina).
+  Testing: NONE. Pure static HTML — no test runner available.
+  Strict TDD: false.
+
+rules:
+  proposal:
+    - Include rollback plan for risky changes
+  specs:
+    - Use Given/When/Then for scenarios
+    - Use RFC 2119 keywords (MUST, SHALL, SHOULD, MAY)
+  design:
+    - Include sequence diagrams for complex flows
+    - Document architecture decisions with rationale
+  tasks:
+    - Group by phase, use hierarchical numbering
+    - Keep tasks completable in one session
+  apply:
+    - Follow existing code patterns (inline CSS/JS, data-od-id, Spanish)
+    - Preserve existing theme system across all HTML files
+    tdd: false
+    test_command: ""
+  verify:
+    test_command: ""
+    build_command: ""
+    coverage_threshold: 0
+  archive:
+    - Warn before merging destructive deltas
+
+testing:
+  strict_tdd: false
+  reason: "No test runner. Static HTML/CSS/JS with no package manager or CI."
+  runner: null
+  layers:
+    unit: false
+    integration: false
+    e2e: false
+  coverage: false
+  quality:
+    linter: false
+    type_checker: false
+    formatter: false
