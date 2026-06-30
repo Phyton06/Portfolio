@@ -1,43 +1,95 @@
-# Astro Starter Kit: Minimal
+# Phyton.dev — Portfolio profesional
 
-```sh
-npm create astro@latest -- --template minimal
+Portfolio personal de **Luis Angel Cardona Becerra** (Phyton06). Construido con Astro 5 + Tailwind CSS v4, diseñado para destacar en procesos de selección de Big Tech. 6 temas de accesibilidad, View Transitions nativas, cero JavaScript superfluo.
+
+## Cómo empezar
+
+```bash
+npm install
+npm run dev        # http://localhost:4321
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+| Comando | Acción |
+|---------|--------|
+| `npm run dev` | Inicia servidor local con recarga en caliente |
+| `npm run build` | Compila sitio estático en `dist/` |
+| `npm run preview` | Previsualiza el build localmente |
+| `npm run astro -- --help` | Ayuda del CLI de Astro |
 
-## 🚀 Project Structure
+## Stack
 
-Inside of your Astro project, you'll see the following folders and files:
+| Capa | Tecnología |
+|------|------------|
+| Framework | Astro 5 (SSG) |
+| Estilos | Tailwind CSS v4 + 6 temas en oklch |
+| Contenido | Content Collections + MDX |
+| Animaciones | View Transitions API + CSS |
+| Dominio | phyton.dev |
+| Hosting | Cloudflare Pages |
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+## Estructura del proyecto
+
+```
+src/
+├── components/        # Componentes reutilizables (Nav, Footer, ThemeToggle, etc.)
+├── content/
+│   └── projects/      # Archivos MDX — cada proyecto es un archivo
+├── layouts/           # Layouts (BaseLayout)
+├── pages/             # Rutas del sitio
+│   ├── index.astro    # Home
+│   ├── projects/      # Listado de proyectos
+│   │   └── [slug].astro  # Detalle de proyecto
+│   └── about.astro    # Sobre mí / Contacto
+└── styles/            # Estilos globales (tema, base)
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Agregar un proyecto
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+1. Crear un archivo `.mdx` en `src/content/projects/`
+2. Completar el frontmatter:
 
-Any static assets, like images, can be placed in the `public/` directory.
+```yaml
+---
+title: "Nombre del proyecto"
+description: "Breve descripción"
+pubDate: 2026-06-29
+tags: ["React", "TypeScript"]
+techStack: ["Astro", "Tailwind"]
+featured: true
+---
+```
 
-## 🧞 Commands
+3. Escribir el contenido en MDX
+4. `npm run build` para verificar
 
-All commands are run from the root of the project, from a terminal:
+## Temas de accesibilidad
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+El sitio incluye 6 temas diseñados para distintas necesidades visuales:
 
-## 👀 Want to learn more?
+| Tema | Ideal para |
+|------|------------|
+| Midnight | Modo oscuro general |
+| Sunset | Modo claro general |
+| Forest | Fatiga visual prolongada |
+| Ocean | Baja sensibilidad al contraste |
+| Lavender | Sensibilidad a la luz azul |
+| Paper | Dislexia y sensibilidad visual |
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Los temas se cambian desde el panel de accesibilidad y se persisten en `localStorage`.
+
+## Desarrollo
+
+```bash
+# Modo desarrollo con recarga en caliente
+npm run dev
+
+# Build de producción
+npm run build
+
+# Vista previa del build
+npm run preview
+```
+
+## Licencia
+
+Código fuente disponible como referencia educativa. Diseño y contenido © Luis Angel Cardona Becerra.
