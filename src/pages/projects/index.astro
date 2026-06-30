@@ -1,0 +1,112 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+
+const allProjects = await getCollection('projects');
+const allTags = [...new Set(allProjects.flatMap((p) => p.data.tags))].sort();
+---
+
+<BaseLayout title="Proyectos — Phyton06">
+  <Fragment slot="nav"><Nav /></Fragment>
+
+  <div class="mx-auto max-w-5xl px-4 py-20">
+    <h1 class="text-3xl md:text-4xl font-bold mb-2">Proyectos</h1>
+    <p class="text-(--fg-muted) mb-8">
+      {allProjects.length} {allProjects.length === 1 ? 'proyecto' : 'proyectos'} — seleccioná una tecnología para filtrar.
+    </p>
+
+    <div class="flex flex-wrap gap-2 mb-8" data-od-id="filter-bar">
+      <button class="filter-btn active" data-filter="all" aria-pressed="true">
+        Todos
+      </button>
+      {allTags.map((tag) => (
+        <button class="filter-btn" data-filter={tag} aria-pressed="false">
+          {tag}
+        </button>
+      ))}
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-od-id="project-grid">
+      {allProjects.map((project) => (
+        <div class="project-item" data-tags={project.data.tags.join(' ')}>
+          <ProjectCard
+            title={project.data.title}
+            description={project.data.description}
+            tags={project.data.tags}
+            slug={project.id}
+          />
+        </div>
+      ))}
+    </div>
+
+    <div id="empty-state" class="hidden text-center py-12 text-(--fg-muted)">
+      No se encontraron proyectos con ese filtro.
+    </div>
+  </div>
+
+  <Fragment slot="footer"><Footer /></Fragment>
+</BaseLayout>
+
+<style is:global>
+  .filter-btn {
+    padding: 0.375rem 1rem;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--fg-muted);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .filter-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .filter-btn.active {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+  }
+</style>
+
+<script>
+  const filterBar = document.querySelector('[data-od-id="filter-bar"]');
+  const grid = document.querySelector('[data-od-id="project-grid"]');
+  const emptyState = document.getElementById('empty-state');
+  const items = grid?.querySelectorAll('.project-item') ?? [];
+
+  filterBar?.addEventListener('click', (e) => {
+    const btn = e.target.closest('.filter-btn');
+    if (!btn) return;
+
+    const filter = btn.dataset.filter;
+
+    filterBar.querySelectorAll('.filter-btn').forEach((b) => {
+      b.classList.remove('active');
+      b.setAttribute('aria-pressed', 'false');
+    });
+    btn.classList.add('active');
+    btn.setAttribute('aria-pressed', 'true');
+
+    let visible = 0;
+    items.forEach((item) => {
+      const tags = item.dataset.tags ?? '';
+      const match = filter === 'all' || tags.split(' ').includes(filter);
+      item.style.display = match ? '' : 'none';
+      if (match) visible++;
+    });
+
+    if (emptyState) {
+      emptyState.classList.toggle('hidden', visible > 0);
+    }
+
+    const live = document.getElementById('announcements');
+    if (live) {
+      live.textContent = `Filtrando por ${filter}. ${visible} proyecto${visible !== 1 ? 's' : ''} mostrado${visible !== 1 ? 's' : ''}.`;
+    }
+  });
+</script>

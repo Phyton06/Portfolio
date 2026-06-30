@@ -1,0 +1,30 @@
+---
+export interface Props {
+  code: string;
+  lang?: string;
+  title?: string;
+}
+
+const { code, lang = 'plaintext', title } = Astro.props;
+---
+
+<figure class="code-block my-6 rounded-lg overflow-hidden border border-(--border) bg-(--surface)">
+  {title && (
+    <figcaption class="px-4 py-2 text-xs font-medium text-(--fg-muted) border-b border-(--border) bg-(--surface)/50">
+      {title}
+    </figcaption>
+  )}
+  <pre class="overflow-x-auto p-4 text-sm leading-relaxed"><code class={`language-${lang}`}>{code}</code></pre>
+</figure>
+
+<style is:global>
+  .code-block pre {
+    margin: 0;
+    background: transparent !important;
+  }
+  .code-block code {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 0.8125rem;
+    line-height: 1.6;
+  }
+</style>
