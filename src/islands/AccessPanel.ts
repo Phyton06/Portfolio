@@ -1,12 +1,4 @@
-interface SwitchDef {
-  attr: string;
-  store: string;
-  onVal: string;
-  offVal: string;
-  label: string;
-}
-
-const SWITCHES: SwitchDef[] = [
+const SWITCHES = [
   { attr: 'data-animations', store: 'phyton-animations', onVal: 'paused', offVal: 'play', label: 'Pausar animaciones' },
   { attr: 'data-underline', store: 'phyton-underline', onVal: 'true', offVal: 'false', label: 'Subrayar todos los links' },
   { attr: 'data-reduced-transparency', store: 'phyton-transparency', onVal: 'true', offVal: 'false', label: 'Reducir transparencia' },
@@ -80,12 +72,6 @@ class AccessPanel extends HTMLElement {
         // Handle ruler visual
         if (attr === 'data-ruler') {
           this.toggleRuler(val === 'true');
-        }
-
-        // Sync reduce motion with animations
-        if (attr === 'data-animations') {
-          const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)');
-          // If user explicitly paused, respect it
         }
       });
     });

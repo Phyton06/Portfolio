@@ -372,10 +372,4 @@
   /* ── Hidden utility ── */
   .hidden { display: none !important; }
 
-/* ── Custom variants for data-theme ── */
-@custom-variant theme-midnight (&[data-theme="midnight"]);
-@custom-variant theme-sunset (&[data-theme="sunset"]);
-@custom-variant theme-forest (&[data-theme="forest"]);
-@custom-variant theme-ocean (&[data-theme="ocean"]);
-@custom-variant theme-lavender (&[data-theme="lavender"]);
-@custom-variant theme-paper (&[data-theme="paper"]);
+
