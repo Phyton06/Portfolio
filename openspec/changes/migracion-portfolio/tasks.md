@@ -42,10 +42,10 @@ Chain strategy: pending
 
 ## Phase 3: Home Page
 
-- [ ] 3.1 `src/pages/index.astro` — `getCollection` with `featured: true` filter
-- [ ] 3.2 `src/components/Hero.astro` — headline, subtitle, CV download CTA, projects link
-- [ ] 3.3 `src/components/ProjectCard.astro` — title, description, techStack badges with colors
-- [ ] 3.4 `src/components/ProjectGrid.astro` — responsive grid for featured cards
+- [x] 3.1 `src/pages/index.astro` — `getCollection` with `featured: true` filter
+- [x] 3.2 `src/components/Hero.astro` — headline, subtitle, CV download CTA, projects link
+- [x] 3.3 `src/components/ProjectCard.astro` — title, description, techStack badges with colors
+- [x] 3.4 `src/components/ProjectGrid.astro` — responsive grid for featured cards
 
 ## Phase 4: Projects Pages & Filtering
 
