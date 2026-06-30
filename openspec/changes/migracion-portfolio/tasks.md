@@ -56,11 +56,11 @@ Chain strategy: pending
 
 ## Phase 5: Interactive Islands & Polish
 
-- [ ] 5.1 `src/islands/ThemeToggle.ts` — Custom Element < 2KB, cycles 6 themes, localStorage
-- [ ] 5.2 `src/islands/AccessPanel.ts` — Custom Element < 2KB, a11y toggles (ruler, font-size, animations, cursor, underline, colorblind)
-- [ ] 5.3 `src/components/ScrollReveal.astro` — Intersection Observer fade-in
-- [ ] 5.4 Wire islands with `client:load` in BaseLayout and pages
-- [ ] 5.5 `pnpm build` + Lighthouse check (> 90 Perf/A11y/BP)
+- [x] 5.1 `src/islands/ThemeToggle.ts` — Custom Element < 2KB, cycles 6 themes, localStorage
+- [x] 5.2 `src/islands/AccessPanel.ts` — Custom Element < 2KB, a11y toggles (ruler, font-size, animations, cursor, underline, colorblind)
+- [x] 5.3 `src/components/ScrollReveal.astro` — Intersection Observer fade-in
+- [x] 5.4 Islands loaded via `<script>` imports en Nav y BaseLayout
+- [x] 5.5 `pnpm build` + Lighthouse check (> 90 Perf/A11y/BP)
 
 ## Phase 6: Cleanup
 
