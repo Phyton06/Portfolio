@@ -311,7 +311,7 @@
     .term-body {
       padding: 22px 20px 26px;
       font-family: var(--font-mono); font-size: 13.5px; line-height: 1.7;
-      min-height: 340px;
+      height: 380px; overflow-y: auto;
     }
     .term-body .l { color: var(--fg-faint); }
     .term-body .ok { color: var(--green); }
@@ -507,7 +507,9 @@
     }
     @media (max-width: 639px) {
       .nav-links { display: none; }
-      .term-body { cursor: text; }
+      .term-body { cursor: text; padding: 16px 14px 20px; font-size: 12px; height: 300px; }
+      .term-body pre { white-space: normal; }
+      .term-help { font-size: 11px; margin-top: 10px; }
       .project-card:has(.proj-details[open]) .proj-body { grid-template-columns: 1fr; }
       .project-card:has(.proj-details[open]) .proj-stack { justify-content: flex-start; }
       .project-card:has(.proj-details[open]) .d-body { grid-template-columns: 1fr; }
