@@ -1,0 +1,35 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# build output
+dist/
+
+# environment
+.env
+.env.local
+
+# editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# misc
+*.log
+npm-debug.log*
+
+# dev artifacts
+.astro/
+.playwright-mcp/
+.impeccable/
+*.png
+*.docx
+og-preview.html
+skills-lock.json
+.ponytail*

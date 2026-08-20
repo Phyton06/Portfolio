@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px;
+    height: 630px;
+    background: #08080c;
+    font-family: "JetBrains Mono", "SF Mono", "Fira Code", monospace;
+    display: flex;
+    overflow: hidden;
+    color: #ececf1;
+  }
+  .left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 70px;
+    gap: 24px;
+  }
+  .prompt {
+    font-size: 18px;
+    color: #63636f;
+  }
+  .prompt .green { color: #2ee06d; }
+  .prompt .cyan { color: #38d0f0; }
+  .name {
+    font-family: "Bricolage Grotesque", "Inter", sans-serif;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #ececf1;
+  }
+  .name .outline {
+    -webkit-text-stroke: 1.5px #ececf1;
+    color: transparent;
+  }
+  .role {
+    font-size: 20px;
+    color: #9d9daa;
+    line-height: 1.5;
+  }
+  .role strong { color: #2ee06d; font-weight: 600; }
+  .url {
+    font-size: 16px;
+    color: #38d0f0;
+    margin-top: 8px;
+  }
+  .right {
+    width: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .terminal-box {
+    width: 320px;
+    background: #0e0e15;
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+  .term-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 12px 16px;
+    background: #16161f;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .dot.r { background: #f06a5a; }
+  .dot.y { background: #f5b842; }
+  .dot.g { background: #2ee06d; }
+  .term-title {
+    margin-left: 8px;
+    font-size: 12px;
+    color: #63636f;
+  }
+  .term-body {
+    padding: 20px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #9d9daa;
+    min-height: 160px;
+  }
+  .term-body .ok { color: #2ee06d; }
+  .term-body .cy { color: #38d0f0; }
+  .term-body .b { color: #ececf1; font-weight: 600; }
+  .term-body .dim { color: #63636f; }
+  .decoration {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px solid rgba(46, 224, 109, 0.15);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+  .decoration::after {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border: 1px solid rgba(56, 208, 240, 0.10);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .terminal-box { position: relative; z-index: 1; }
+</style>
+</head>
+<body>
+  <div class="left">
+    <p class="prompt"><span class="green">phyton06</span>@dev:~/portfolio$ <span class="cyan">cat</span> .profile</p>
+    <h1 class="name">Luis Ángel<br /><span class="outline">Cardona Becerra.</span></h1>
+    <p class="role"><strong>Full-stack developer</strong> — Go, Python, Angular, PostgreSQL.<br/>100% Linux · TDD · always building.</p>
+    <p class="url">phyton06.github.io/portafolio</p>
+  </div>
+  <div class="right">
+    <div class="decoration"></div>
+    <div class="terminal-box">
+      <div class="term-bar">
+        <span class="dot r"></span>
+        <span class="dot y"></span>
+        <span class="dot g"></span>
+        <span class="term-title">phyton06@dev: ~/portfolio</span>
+      </div>
+      <div class="term-body">
+        <span class="ok">Luis Ángel Cardona Becerra</span><br/>
+        <span class="dim">full-stack developer</span><br/>
+        <span class="dim">TSU TI · eng. in progress</span><br/>
+        <span class="dim">100% linux · tdd · sdd · open source</span><br/>
+        <span class="cy">status: open to opportunities</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
