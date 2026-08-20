@@ -322,6 +322,10 @@
     .term-body .b { color: var(--fg); font-weight: 600; }
     .term-body .dbl { margin: 8px 0; }
     .term-body pre { margin: 0; white-space: pre-wrap; word-break: break-word; font-family: inherit; }
+    .term-input {
+      position: absolute; left: -9999px; width: 1px; height: 1px;
+      opacity: 0; pointer-events: none;
+    }
     .term-line { display: flex; align-items: center; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
     .term-prompt { color: var(--green); white-space: nowrap; }
     .term-cmd { color: var(--fg); }
@@ -502,6 +506,8 @@
       .project-card:has(.proj-details[open]) .d-body { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 639px) {
+      .nav-links { display: none; }
+      .term-body { cursor: text; }
       .project-card:has(.proj-details[open]) .proj-body { grid-template-columns: 1fr; }
       .project-card:has(.proj-details[open]) .proj-stack { justify-content: flex-start; }
       .project-card:has(.proj-details[open]) .d-body { grid-template-columns: 1fr; }
@@ -542,6 +548,7 @@
             <span class="term-title"><span class="green">phyton06</span>@dev: ~/portfolio — zsh</span>
           </div>
           <div class="term-body" id="termBody" aria-live="polite">
+            <input class="term-input" id="termInput" type="text" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="send">
             <pre id="termPre"></pre>
             <div class="term-line">
               <span class="term-prompt">phyton06@dev:~$</span>
@@ -1158,6 +1165,39 @@
       document.addEventListener('keydown', handleKey);
       body.addEventListener('click', function () { body.focus(); });
       body.setAttribute('tabindex', '0');
+
+      // Mobile: hidden input for keyboard
+      var termInput = document.getElementById('termInput');
+      if (termInput) {
+        body.addEventListener('click', function () { termInput.focus(); });
+        termInput.addEventListener('input', function () {
+          var val = termInput.value;
+          if (val) {
+            for (var i = 0; i < val.length; i++) {
+              buffer += val[i];
+            }
+            termInput.value = '';
+            render();
+          }
+        });
+        termInput.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter') {
+            var cmd = buffer.trim();
+            if (cmd !== '') {
+              printLines('<span class="ok">phyton06@dev:~$</span> <span class="b">' + cmd + '</span>');
+              execute(cmd);
+              hasOutput = true;
+            }
+            buffer = '';
+            render();
+            e.preventDefault();
+          } else if (e.key === 'Backspace') {
+            buffer = buffer.slice(0, -1);
+            render();
+            e.preventDefault();
+          }
+        });
+      }
     })();
 
     // Copy email to clipboard
