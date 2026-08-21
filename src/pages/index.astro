@@ -114,7 +114,7 @@
         'p6.how': 'Dos modos de juego: "Aventura en el espacio", con mini juegos que eran retos matemáticos (barras, gráficos, coordenadas, sumas y multiplicaciones) apoyados con imágenes y videos generados por Gemini; al pasar cada nivel se avanza más en el espacio. Y "Aventura por Nayarit": un mapa del estado donde el niño desbloquea primero su municipio y, con puntos, los demás; cada punto muestra historias (como la del dragón del cerro de Santiago), costumbres, vestimentas y dialectos, narradas para reforzar comprensión lectora y de escucha, con mini juegos por historia.',
         'p6.decisions': 'Apliqué lo aprendido en las conferencias: nunca decirle al niño que perdió ni mensajes desalentadores, sino apoyarlo a intentarlo de nuevo. El MVP quedó funcional con sonidos, vibraciones y colores para una mejor inmersión. Quedó pendiente la inteligencia artificial: estadísticas por alumno para el profesor (fortalezas, debilidades y avance), tips del enfoque según el estilo de aprendizaje (visual, motriz, sonoro o kinestésico), y retos que se adaptan al rendimiento del niño, explicando el problema de otra manera si vuelve a fallar y variando contenido y dificultad aunque dos niños estén en el mismo nivel.',
         'p6.result': 'A los participantes que la probaron y a los niños les encantó y decían que ganaría, pero no obtuve lugar: el equipo no se conocía, nadie se desenvolvió bien ante los jueces y omitieron datos importantes. Fue mi primer hackatón: aprendí mucho, mejoré mi habilidad para exponer una idea o producto y gané confianza.',
-        'p7.title': 'Módulo de checador',
+        'p7.title': 'Biometric Attendance System',
         'p7.desc': 'Automatización del registro de entrada y salida de empleados (administrativos, PTC y PA) en SIEst v2, con pulling en tiempo real desde dispositivos ZKTEco y dashboards para RH.',
         'p7.context': 'Primer módulo que construí en SIEst v2: el sistema de checador registraba entrada y salida de empleados — administrativos, profesores de tiempo completo (PTC) y profesores de asignatura (PA). El proceso anterior era manual: una computadora central ejecutaba el software de los checadores y generaba archivos Excel cada quincena, que RH recibía, capturaba los datos, reportaba faltas y pedía justificantes. Había que automatizar eso.',
         'p7.how': 'Primero implementé la carga de archivos Excel al sistema: leía el archivo automáticamente, generaba las tablas quincenales de checadas y mostraba las incidencias. Pero seguía dependiendo de que alguien subiera el archivo manualmente. Investigé los dispositivos ZKTEco y encontré un método oficial de la marca, junto con un script en Python en GitHub. Instalé ese script en la computadora central, configuré la dirección IP de cada checador y puse el pulling cada 10 minutos. Agregué tolerancia a fallos: si se iba la luz o internet, el script guardaba la última hora de pull exitoso y al restaurarse recuperaba los datos faltantes.',
@@ -765,9 +765,9 @@
             </details>
           </article>
           <article class="project-card">
-            <div class="proj-head"><span class="folder">📁</span> <span class="name">~/projects/modulo-checador</span> <span class="lang">php · py</span></div>
+            <div class="proj-head"><span class="folder">📁</span> <span class="name">~/projects/biometric-attendance</span> <span class="lang">php · py</span></div>
             <div class="proj-body">
-              <h3 data-i18n="p7.title">Attendance checker module</h3>
+              <h3 data-i18n="p7.title">Biometric Attendance System</h3>
               <p data-i18n="p7.desc">Automated employee check-in/check-out tracking (administrative staff, PTC and PA) in SIEst v2, with real-time pulling from ZKTEco devices and dashboards for HR.</p>
               <div class="proj-stack">
                 <span class="chip"><img src="icons/angular.svg" alt="" />Angular</span>
@@ -1087,7 +1087,7 @@
           ],
           projects: [
             '<span class="b">~/projects</span>',
-            '<span class="dim">  modulo-checador </span><span class="l">SIEst v2 + Python · ZKTEco · 800+ employees</span>',
+            '<span class="dim">  biometric-attendance </span><span class="l">SIEst v2 + Python · ZKTEco · 800+ employees</span>',
             '<span class="dim">  rassa-jala      </span><span class="l">Django + React Native · 70 farmers, 100+ orders/wk</span>',
             '<span class="dim">  modulo-estadias </span><span class="l">SQL Server + JSP · best project 2025</span>',
             '<span class="dim">  modulo-comisiones</span><span class="l">SQL Server + JSP · electronic signature</span>',
@@ -1138,7 +1138,7 @@
           ],
           projects: [
             '<span class="b">~/proyectos</span>',
-            '<span class="dim">  modulo-checador </span><span class="l">SIEst v2 + Python · ZKTEco · 800+ empleados</span>',
+            '<span class="dim">  biometric-attendance </span><span class="l">SIEst v2 + Python · ZKTEco · 800+ empleados</span>',
             '<span class="dim">  rassa-jala      </span><span class="l">Django + React Native · 70 agricultores, 100+ pedidos/sem</span>',
             '<span class="dim">  modulo-estadias </span><span class="l">SQL Server + JSP · mejor proyecto 2025</span>',
             '<span class="dim">  modulo-comisiones</span><span class="l">SQL Server + JSP · firma electrónica</span>',
