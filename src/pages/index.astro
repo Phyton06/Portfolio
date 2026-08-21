@@ -107,7 +107,7 @@
         'p5.decisions': 'Go para backend por su rendimiento y concurrencia nativa con goroutines. PostGIS porque la geolocalización es el core del producto — encontrar el conductor más cercano en tiempo real requiere consultas espaciales optimizadas. React Native para móvil porque una sola base de código cubre ambas plataformas. React + Tailwind para el admin porque permite una interfaz rápida de construir y mantener.',
         'p5.result': 'Backend funcional con autenticación, viajes y tracking GPS. Panel de administración desplegado. Apps móviles en desarrollo.',
         'p5.status': '<strong>Implementado ✅</strong> Backend en Go, PostgreSQL + PostGIS, auth JWT/OTP, state machine de viajes, panel admin (React + Vite + Tailwind).<br/><strong>En desarrollo 🚧</strong> Consultas espaciales PostGIS (aprendiendo), apps móviles React Native.<br/><strong>Planeado 📋</strong> Redis para caché, WebSockets para tracking en tiempo real, despliegue con Docker.',
-        'status.dev': '🚧 en desarrollo',
+        'status.dev': 'en desarrollo',
         'p6.title': 'Aprender es fantástico',
         'p6.desc': 'App móvil de hackatón para que niños de 5º y 6º de primaria mejoren en matemáticas y lenguaje, con dos modos de juego y retos adaptativos.',
         'p6.context': 'Hackatón en Tepic, Nayarit, organizado por la Secretaría de Educación Pública del estado: crear una app móvil para ayudar a niños de 5º y 6º de primaria a mejorar sus calificaciones de matemáticas y lenguaje. Nos dieron conferencias sobre la forma en que se dan las clases y llevaron niños a probar las apps que desarrollamos. Lideré a mi equipo.',
@@ -390,6 +390,7 @@
     /* projects */
     .projects-grid { display: grid; gap: 16px; grid-template-columns: 1fr; grid-auto-flow: dense; }
     .project-card {
+      position: relative;
       border: 1px solid var(--border); border-radius: var(--radius);
       background: var(--bg-2); overflow: hidden;
       display: flex; flex-direction: column;
@@ -434,8 +435,13 @@
     .proj-stack { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
     .proj-stack .chip { font-size: 11.5px; padding: 3px 9px; background: var(--bg); }
     .proj-stack .chip::before { content: ""; }
-    .status-badge { font-size: 11px; padding: 2px 8px; border-radius: 4px; font-family: var(--font-mono); font-weight: 600; margin-left: auto; white-space: nowrap; }
-    .status-dev { background: rgba(255, 183, 77, 0.15); color: #ffb74d; border: 1px solid rgba(255, 183, 77, 0.3); }
+    .status-badge {
+      position: absolute; top: 0; left: 0; z-index: 2;
+      font-size: 10px; padding: 3px 8px; border-radius: 0 0 var(--radius) 0;
+      font-family: var(--font-mono); font-weight: 600; white-space: nowrap;
+      text-transform: uppercase; letter-spacing: 0.04em;
+    }
+    .status-dev { background: rgba(255, 183, 77, 0.12); color: #ffb74d; border: 1px solid rgba(255, 183, 77, 0.25); border-top: none; border-left: none; }
     .proj-status-detail { margin-top: 12px; }
     .proj-status-detail .d-text strong { color: var(--fg); }
     /* project expandable detail */
@@ -719,7 +725,8 @@
         </div>
         <div class="projects-grid">
           <article class="project-card">
-            <div class="proj-head"><span class="folder">📁</span> <span class="name">~/projects/umi</span> <span class="lang">go · react · pg</span> <span class="status-badge status-dev" data-i18n="status.dev">🚧 in development</span></div>
+            <span class="status-badge status-dev" data-i18n="status.dev">in development</span>
+            <div class="proj-head"><span class="folder">📁</span> <span class="name">~/projects/umi</span> <span class="lang">go · react · pg</span></div>
             <div class="proj-body">
               <h3 data-i18n="p5.title">UMI</h3>
               <p data-i18n="p5.desc">Ride-hailing platform for Santiago Ixcuintla, Nayarit — like Didi or Uber but with local taxi drivers, where those platforms don't work.</p>
