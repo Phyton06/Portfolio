@@ -120,7 +120,13 @@
         'p7.context': 'Primer módulo que construí en SIEst v2: el sistema de checador registraba entrada y salida de empleados — administrativos, profesores de tiempo completo (PTC) y profesores de asignatura (PA). El proceso anterior era manual: una computadora central ejecutaba el software de los checadores y generaba archivos Excel cada quincena, que RH recibía, capturaba los datos, reportaba faltas y pedía justificantes. Había que automatizar eso.',
         'p7.how': 'Primero implementé la carga de archivos Excel al sistema: leía el archivo automáticamente, generaba las tablas quincenales de checadas y mostraba las incidencias. Pero seguía dependiendo de que alguien subiera el archivo manualmente. Investigé los dispositivos ZKTEco y encontré un método oficial de la marca, junto con un script en Python en GitHub. Instalé ese script en la computadora central, configuré la dirección IP de cada checador y puse el pulling cada 10 minutos. Agregué tolerancia a fallos: si se iba la luz o internet, el script guardaba la última hora de pull exitoso y al restaurarse recuperaba los datos faltantes.',
         'p7.decisions': 'Con los datos llegando en tiempo real, mejoré varias cosas que no estaban planeadas originalmente: diagramas, gráficas e indicadores (KPIs) para que RH viera el estado de asistencia de un vistazo. El sistema excluye automáticamente días festivos y días inhábiles para no marcar faltas falsas. También implementé horarios especiales por empleado por fecha — si alguien tiene un permiso o jornada distinta, se configura sin afectar el resto. Todo esto evita que RH tenga que revisar manualmente cada incidencia para decidir si es real o no.',
-        'p7.result': 'Sirve a ~800 empleados (administrativos, PTC y PA) con entradas y salidas de lunes a sábado. RH pasa de un proceso de 3.5 días (extraer Excel + analizar + enviar correos) a acceso instantáneo de incidencias y envío automático de justificantes.'
+        'p7.result': 'Sirve a ~800 empleados (administrativos, PTC y PA) con entradas y salidas de lunes a sábado. RH pasa de un proceso de 3.5 días (extraer Excel + analizar + enviar correos) a acceso instantáneo de incidencias y envío automático de justificantes.',
+        'p8.title': 'BolsaLaboral — Bolsa de Trabajo Universitaria',
+        'p8.desc': 'Bolsa de trabajo full-stack que conecta egresados con empresas: match laboral por IA, evaluaciones técnicas, radar de empleabilidad y generación de CV en PDF. 3er lugar en Hackathon DITI 2026.',
+        'p8.context': 'Hackatón universitario de 28 horas en la Universidad Tecnológica de la Costa: crear una bolsa de trabajo que conecte egresados con empresas. Lideré un equipo de 5, diseñé la base de datos, distribuí las tareas y trabajé tanto en frontend como en backend. La innovación clave: funcionalidades de IA — match laboral, análisis de habilidades por carrera (sistemas, turismo, administración de empresas), recomendaciones de desarrollo profesional y descripciones de vacantes generadas por IA para reclutadores.',
+        'p8.how': 'Angular 17 con componentes standalone y lazy loading para el frontend; PHP con micro-framework FlightPHP y autenticación JWT para el backend; PostgreSQL para la base de datos con un esquema de 11+ tablas. El match por IA compara las habilidades del egresado contra un perfil idóneo por carrera, calculando puntuaciones de compatibilidad. Las evaluaciones técnicas usan un banco de preguntas con generación por IA. También construí un radar de empleabilidad con Chart.js y un generador de CV en PDF.',
+        'p8.decisions': 'Angular para el frontend porque era el framework principal que enseñaban en nuestra carrera y era una oportunidad para que el equipo lo practicara en un proyecto real. FlightPHP para el backend porque es ligero y rápido de desarrollar bajo presión de tiempo. PostgreSQL porque maneja consultas complejas bien y el equipo tenía experiencia con él. Las funcionalidades de IA fueron el diferenciador — mientras otros equipos construían apps CRUD básicas, nosotros agregamos match inteligente que realmente ayuda a los egresados a encontrar empleos relevantes.',
+        'p8.result': '3er lugar en Hackathon DITI 2026. La plataforma conecta egresados de 3 carreras (sistemas, turismo, administración de empresas) con empresas, con match laboral por IA, evaluaciones técnicas y radar de empleabilidad. Presenté el proyecto ante los jueces, lo que contribuyó a nuestro lugar.'
       };
 
       function applyLang(lang) {
@@ -968,6 +974,45 @@
                 <div class="d-block d-result">
                   <div class="d-label"><span class="green" data-i18n="lbl.result">result</span></div>
                   <p class="d-text" data-i18n="p6.result">Participants who tested it and the kids loved it and said it would win, but I didn't place: the team didn't know each other, no one presented well to the judges and they omitted important data. It was my first hackathon: I learned a lot, improved my ability to present an idea or product and gained confidence.</p>
+                </div>
+              </div>
+            </details>
+          </article>
+          <article class="project-card">
+            <div class="proj-head"><span class="folder">📁</span> <span class="name">~/projects/bolsa-laboral</span> <span class="lang">angular · php · postgresql</span></div>
+            <div class="proj-body">
+              <h3 data-i18n="p8.title">BolsaLaboral — University Job Board</h3>
+              <p data-i18n="p8.desc">Full-stack job board connecting graduates with employers: AI-powered job matching, technical assessments, employability radar, and PDF CV generation. 3rd place at Hackathon DITI 2026.</p>
+              <div class="proj-stack">
+                <span class="chip"><img src="icons/angular.svg" alt="" />Angular 17</span>
+                <span class="chip"><img src="icons/php.svg" alt="" />PHP</span>
+                <span class="chip"><img src="icons/php.svg" alt="" />Flight</span>
+                <span class="chip"><img src="icons/postgresql.svg" alt="" />PostgreSQL</span>
+              </div>
+            </div>
+            <details class="proj-details">
+              <summary class="cta-underline"><span class="caret">▸</span> <span data-i18n="cta">more info</span></summary>
+              <div class="d-body">
+                <div class="d-block">
+                  <div class="d-label"><span class="green" data-i18n="lbl.context">context</span></div>
+                  <p class="d-text" data-i18n="p8.context">28-hour university hackathon at Universidad Tecnológica de la Costa: build a job board connecting graduates with employers. I led a team of 5, designed the database, distributed tasks, and worked on both frontend and backend. Key innovation: AI features — job matching, skills analysis per career (systems, tourism, business admin), professional development recommendations, and AI-generated job descriptions for recruiters.</p>
+                </div>
+                <div class="d-block">
+                  <div class="d-label"><span class="green" data-i18n="lbl.how">how I built it</span></div>
+                  <p class="d-text" data-i18n="p8.how">Angular 17 with standalone components and lazy loading for the frontend; PHP with FlightPHP micro-framework and JWT authentication for the backend; PostgreSQL for the database with a schema of 11+ tables. The AI matching compares graduate skills against an ideal profile per career, calculating compatibility scores. Technical assessments use a question bank with AI-generated questions. I also built an employability radar with Chart.js and a PDF CV builder.</p>
+                </div>
+                <div class="d-block">
+                  <div class="d-label"><span class="green" data-i18n="lbl.decisions">decisions</span></div>
+                  <p class="d-text" data-i18n="p8.decisions">Angular for the frontend because it was the main framework taught in our career and it was a chance for the team to practice it in a real project. FlightPHP for the backend because it's lightweight and fast to develop with under time pressure. PostgreSQL because it handles complex queries well and the team had experience with it. The AI features were the differentiator — while other teams built basic CRUD apps, we added intelligent matching that actually helps graduates find relevant jobs.</p>
+                </div>
+                <div class="d-block d-result">
+                  <div class="d-label"><span class="green" data-i18n="lbl.result">result</span></div>
+                  <p class="d-text" data-i18n="p8.result">3rd place at Hackathon DITI 2026. The platform connects graduates from 3 careers (systems, tourism, business administration) with employers, featuring AI job matching, technical assessments, and an employability radar. I presented the project to the judges, which contributed to our placement.</p>
+                </div>
+                <div class="proj-stack" style="margin-top: 8px;">
+                  <a href="https://github.com/Phyton06/BolsaLaboralFront" target="_blank" rel="noopener" class="chip" style="text-decoration: none; color: inherit;"><img src="icons/github.svg" alt="" /><span data-i18n="view.repo">View repo</span></a>
+                  <a href="https://github.com/Phyton06/BolsaLaboralBack" target="_blank" rel="noopener" class="chip" style="text-decoration: none; color: inherit;"><img src="icons/github.svg" alt="" /><span>Backend repo</span></a>
+                  <a href="https://phyton06.github.io/BolsaLaboralFront/" target="_blank" rel="noopener" class="chip" style="text-decoration: none; color: inherit;">🔗 <span data-i18n="view.prototype">View prototype</span></a>
                 </div>
               </div>
             </details>
