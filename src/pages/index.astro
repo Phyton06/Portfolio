@@ -402,7 +402,7 @@
     .project-card:has(.proj-details[open]) .proj-body { display: grid; grid-template-columns: 1fr; align-items: start; column-gap: 24px; }
     .project-card:has(.proj-details[open]) h3 { font-size: 26px; }
     .project-card:has(.proj-details[open]) .proj-body p { font-size: 15.5px; max-width: 62ch; }
-    .project-card:has(.proj-details[open]) .proj-stack { justify-content: flex-start; }
+    .project-card:has(.proj-details[open]) .proj-stack { grid-column: 1 / -1; justify-content: flex-start; }
     .project-card:has(.proj-details[open]) .proj-details { margin-top: 0; }
     .project-card:has(.proj-details[open]) .d-body { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 
@@ -473,6 +473,7 @@
     }
     .proj-details .d-result .d-text { font-size: 15px; color: var(--fg); }
     .proj-details .d-result .d-label { color: var(--green); }
+    .proj-status-detail { grid-column: 1 / -1; }
 
     /* leadership */
     .leadership-list { display: grid; gap: 12px; }
@@ -543,7 +544,7 @@
       .term-body pre { white-space: normal; }
       .term-help { font-size: 11px; margin-top: 10px; }
       .project-card:has(.proj-details[open]) .proj-body { grid-template-columns: 1fr; }
-      .project-card:has(.proj-details[open]) .proj-stack { justify-content: flex-start; }
+    .project-card:has(.proj-details[open]) .proj-stack { grid-column: 1 / -1; justify-content: flex-start; }
       .project-card:has(.proj-details[open]) .d-body { grid-template-columns: 1fr; }
       .contact-grid { grid-template-columns: 1fr; }
     }
