@@ -390,7 +390,6 @@
     /* projects */
     .projects-grid { display: grid; gap: 16px; grid-template-columns: 1fr; grid-auto-flow: dense; }
     .project-card {
-      position: relative;
       border: 1px solid var(--border); border-radius: var(--radius);
       background: var(--bg-2); overflow: hidden;
       display: flex; flex-direction: column;
@@ -436,12 +435,11 @@
     .proj-stack .chip { font-size: 11.5px; padding: 3px 9px; background: var(--bg); }
     .proj-stack .chip::before { content: ""; }
     .status-badge {
-      position: absolute; top: 0; left: 0; z-index: 2;
-      font-size: 10px; padding: 3px 8px; border-radius: 0 0 var(--radius) 0;
+      font-size: 10px; padding: 3px 8px; border-radius: 4px;
       font-family: var(--font-mono); font-weight: 600; white-space: nowrap;
-      text-transform: uppercase; letter-spacing: 0.04em;
+      text-transform: uppercase; letter-spacing: 0.04em; align-self: flex-start;
     }
-    .status-dev { background: rgba(255, 183, 77, 0.12); color: #ffb74d; border: 1px solid rgba(255, 183, 77, 0.25); border-top: none; border-left: none; }
+    .status-dev { background: rgba(255, 183, 77, 0.12); color: #ffb74d; border: 1px solid rgba(255, 183, 77, 0.25); }
     .proj-status-detail { margin-top: 12px; }
     .proj-status-detail .d-text strong { color: var(--fg); }
     /* project expandable detail */
@@ -725,7 +723,6 @@
         </div>
         <div class="projects-grid">
           <article class="project-card">
-            <span class="status-badge status-dev" data-i18n="status.dev">in development</span>
             <div class="proj-head"><span class="folder">📁</span> <span class="name">~/projects/umi</span> <span class="lang">go · react · pg</span></div>
             <div class="proj-body">
               <h3 data-i18n="p5.title">UMI</h3>
@@ -736,6 +733,7 @@
                 <span class="chip"><img src="icons/postgresql.svg" alt="" />PostgreSQL</span>
                 <span class="chip"><img src="icons/react.svg" alt="" />React Native</span>
               </div>
+              <span class="status-badge status-dev" data-i18n="status.dev">in development</span>
             </div>
             <details class="proj-details">
               <summary class="cta-underline"><span class="caret">▸</span> <span data-i18n="cta">more info</span></summary>
