@@ -85,7 +85,7 @@
 
 ### P2 — Depth Signals
 
-- [ ] **9. UMI Architecture Section**
+- [x] **9. UMI Architecture Section**
   - System design diagram (React Native → Go → PostgreSQL/PostGIS + Redis later)
   - API docs, database schema, concurrency model, state machine
   - "Proof" over "claim"
