@@ -105,7 +105,7 @@
   - "Built a functional MVP tested by elementary-school students during the event"
   - Replace subjective claims with evidence
 
-- [ ] **13. Evolution Narrative**
+- [x] **13. Evolution Narrative**
   - Show progression: "Started building systems → solved real problems → worked with legacy → automated processes → led teams → now building distributed/geospatial systems"
 
 - [ ] **14. Education Framing**
