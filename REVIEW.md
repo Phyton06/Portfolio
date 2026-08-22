@@ -90,7 +90,7 @@
   - API docs, database schema, concurrency model, state machine
   - "Proof" over "claim"
 
-- [ ] **10. Algorithms & Data Structures**
+- [x] **10. Algorithms & Data Structures**
   - 15–25 well-documented problems (not a LeetCode graveyard)
   - Connect to real problems (e.g., nearest drivers → spatial indexing → O(log n))
 
