@@ -101,12 +101,12 @@ Profile has evolved from *"student with school projects"* to *"soon-to-graduate 
 
 ### 🟡 P1 — High Impact (Same Week)
 
-- [ ] **7. UMI technical README**
+- [x] **7. UMI technical README**
   - Architecture, data flow, authentication, API contract, state machine, DB model, real-time strategy, failure handling
   - Trip lifecycle diagram: REQUESTED → SEARCHING → ACCEPTED → DRIVER_ARRIVING → IN_PROGRESS → COMPLETED
   - Excellent interview material
 
-- [ ] **8. Stack hierarchy in hero**
+- [x] **8. Stack hierarchy in hero**
   - Primary: Go · Python · TypeScript · PostgreSQL
   - Secondary: Angular · React · PHP · SQL Server
   - Familiar: React Native · Flutter · Supabase · Docker
@@ -120,7 +120,7 @@ Profile has evolved from *"student with school projects"* to *"soon-to-graduate 
   - Add: "Development: AI-assisted development was used for implementation acceleration; architecture, database design, feature decisions, integration and validation were performed by the team."
   - Protects against "did you write this yourself?" questions
 
-- [ ] **11. Experience section — clarify "led"**
+- [x] **11. Experience section — clarify "led"**
   - Current: "Led agile teams of up to 20 developers"
   - Change to: "Led agile development teams of up to 20 contributors, coordinating task distribution, code review, branch protection and weekly sprint planning"
   - Makes "led" concrete, not ambiguous
