@@ -41,23 +41,23 @@
 
 ### P0 — High Impact
 
-- [ ] **1. Positioning: Backend / Full-Stack Engineer**
+- [x] **1. Positioning: Backend / Full-Stack Engineer**
   - Core: Go · Python · PostgreSQL · TypeScript · React
   - Secondary: Angular · Java · PHP · SQL Server · React Native · Docker · Linux
   - Remove "Go, PostGIS, React Native" as the only identity — hierarchize
 
-- [ ] **2. UMI: Show as "In Development"**
+- [x] **2. UMI: Show as "In Development"**
   - Add status badge: `Status: In Development`
   - Current focus: Backend architecture, geospatial DB design, driver matching
   - Planned: React Native passenger and driver apps
   - Present honestly — learning PostGIS through building UMI
 
-- [ ] **3. Experience Section**
+- [x] **3. Experience Section**
   - Add explicit "Experience" section (not just projects)
   - SIEst / Universidad Tecnológica de la Costa — 2025–Present
   - Bullet points: Built, Automated, Integrated, Led, Reduced, Deployed
 
-- [ ] **4. Project Order by Recruiter Priority**
+- [x] **4. Project Order by Recruiter Priority**
   1. UMI (system design potential, Go/PostGIS)
   2. SIEst / Attendance Checker (800+ employees, automation story)
   3. Estadías (legacy + production + stakeholder analysis)
@@ -68,11 +68,11 @@
 
 ### P1 — GitHub & Evidence
 
-- [ ] **5. GitHub READMEs — Professional Standard**
+- [x] **5. GitHub READMEs — Professional Standard**
   - Each repo needs: architecture, screenshots, demo, technical decisions, how to run, tests, CI/CD, metrics, known issues
   - Homogenize quality across repos
 
-- [ ] **6. Nakawe — Synthetic Data Disclaimer**
+- [x] **6. Nakawe — Synthetic Data Disclaimer**
   - Add: "Synthetic demo data — no real patient information is stored or processed"
 
 - [ ] **7. Visible Testing**
