@@ -88,14 +88,14 @@ Profile has evolved from *"student with school projects"* to *"soon-to-graduate 
   - Example: matchScore(), candidateService, jobService
   - Changes perception from "hackathon project" to "hackathon project where developer cares about maintainability"
 
-- [ ] **4. Nakawe — synthetic data disclaimer**
+- [x] **4. Nakawe — synthetic data disclaimer**
   - Add explicit: "All patient data in this repository is synthetic and fictional. No real patient information is used or stored."
   - Spanish version too
 
-- [ ] **5. Nakawe — secrets documentation**
+- [x] **5. Nakawe — secrets documentation**
   - Document: key is never committed, repo only has config template, production uses server-side secret manager/env vars
 
-- [ ] **6. TDD/SDD evidence**
+- [x] **6. TDD/SDD evidence**
   - Either add tests that prove TDD claim, or remove TDD from hero headline
   - No keyword without evidence
 
