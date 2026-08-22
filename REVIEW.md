@@ -112,11 +112,11 @@ Profile has evolved from *"student with school projects"* to *"soon-to-graduate 
   - Familiar: React Native · Flutter · Supabase · Docker
   - Makes profile look deeper, less scattered
 
-- [ ] **9. Remove "Designed for Big Tech recruitment" from Portfolio README**
+- [x] **9. Remove "Designed for Big Tech recruitment" from Portfolio README**
   - Replace with: "Professional software engineering portfolio built with Astro..."
   - Let the product demonstrate quality, don't claim it
 
-- [ ] **10. Clarify AI usage in Bolsa Laboral**
+- [x] **10. Clarify AI usage in Bolsa Laboral**
   - Add: "Development: AI-assisted development was used for implementation acceleration; architecture, database design, feature decisions, integration and validation were performed by the team."
   - Protects against "did you write this yourself?" questions
 
