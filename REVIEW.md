@@ -108,7 +108,7 @@
 - [x] **13. Evolution Narrative**
   - Show progression: "Started building systems → solved real problems → worked with legacy → automated processes → led teams → now building distributed/geospatial systems"
 
-- [ ] **14. Education Framing**
+- [x] **14. Education Framing**
   - Not "I'm studying" but "I'm studying AND already building production systems"
 
 ---
