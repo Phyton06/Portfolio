@@ -75,7 +75,7 @@
 - [x] **6. Nakawe — Synthetic Data Disclaimer**
   - Add: "Synthetic demo data — no real patient information is stored or processed"
 
-- [ ] **7. Visible Testing**
+- [x] **7. Visible Testing**
   - Show test directories, CI badges, test commands
   - Convert "TDD" claim into evidence
 
