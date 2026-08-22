@@ -79,7 +79,7 @@
   - Show test directories, CI badges, test commands
   - Convert "TDD" claim into evidence
 
-- [ ] **8. Engineering Metrics (when available)**
+- [x] **8. Engineering Metrics (when available)**
   - API response times, query performance, test coverage, Docker image size, deployment time
   - Don't invent — measure what exists
 
