@@ -94,7 +94,7 @@
   - 15–25 well-documented problems (not a LeetCode graveyard)
   - Connect to real problems (e.g., nearest drivers → spatial indexing → O(log n))
 
-- [ ] **11. Reduce Tech Breadth in Hero**
+- [x] **11. Reduce Tech Breadth in Hero**
   - Hero should project: "Backend/full-stack engineer who moves across the stack"
   - Not: "I know 15 technologies"
 
