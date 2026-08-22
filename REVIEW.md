@@ -74,7 +74,7 @@ Profile has evolved from *"student with school projects"* to *"soon-to-graduate 
 
 ### 🔴 P0 — Before Applying (Blockers)
 
-- [ ] **1. GitHub Profile README**
+- [x] **1. GitHub Profile README**
   - Create profile README with: name, role, tech stack, highlights (800+ users, 3rd place hackathon, best internship, led 20 devs)
   - Change pinned repo order: UMI → Bolsa → Nakawe → Portfolio
 
