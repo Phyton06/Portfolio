@@ -78,7 +78,7 @@ Profile has evolved from *"student with school projects"* to *"soon-to-graduate 
   - Create profile README with: name, role, tech stack, highlights (800+ users, 3rd place hackathon, best internship, led 20 devs)
   - Change pinned repo order: UMI → Bolsa → Nakawe → Portfolio
 
-- [ ] **2. Fix UMIAdmin repo description**
+- [x] **2. Fix UMIAdmin repo description**
   - Current: "UMI ride-hailing admin panel — Flutter Web"
   - Change to: "UMI ride-hailing admin panel — React + Vite + Tailwind"
   - 30-second fix, avoids unnecessary questions
