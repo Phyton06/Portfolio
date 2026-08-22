@@ -1,6 +1,6 @@
 # Phyton.dev — Portfolio profesional
 
-Portfolio personal de **Luis Angel Cardona Becerra** (Phyton06). Construido con Astro 5 + Tailwind CSS v4, diseñado para destacar en procesos de selección de Big Tech. 6 temas de accesibilidad, View Transitions nativas, cero JavaScript superfluo.
+Portfolio personal de **Luis Angel Cardona Becerra** (Phyton06). Construido con Astro 7 + Tailwind CSS v4, diseñado para destacar en procesos de selección de Big Tech. 6 temas de accesibilidad, View Transitions nativas, cero JavaScript superfluo.
 
 ## Cómo empezar
 
@@ -20,7 +20,7 @@ npm run dev        # http://localhost:4321
 
 | Capa | Tecnología |
 |------|------------|
-| Framework | Astro 5 (SSG) |
+| Framework | Astro 7 (SSG) |
 | Estilos | Tailwind CSS v4 + 6 temas en oklch |
 | Contenido | Content Collections + MDX |
 | Animaciones | View Transitions API + CSS |
