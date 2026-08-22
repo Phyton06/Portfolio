@@ -83,7 +83,7 @@ Profile has evolved from *"student with school projects"* to *"soon-to-graduate 
   - Change to: "UMI ride-hailing admin panel — React + Vite + Tailwind"
   - 30-second fix, avoids unnecessary questions
 
-- [ ] **3. Automated tests in at least UMI or Bolsa Laboral**
+- [x] **3. Automated tests in at least UMI or Bolsa Laboral**
   - 5–10 real tests, not 200 artificial ones
   - Example: matchScore(), candidateService, jobService
   - Changes perception from "hackathon project" to "hackathon project where developer cares about maintainability"
