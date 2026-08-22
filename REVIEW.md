@@ -127,10 +127,10 @@ Profile has evolved from *"student with school projects"* to *"soon-to-graduate 
 
 ### 🟢 P2 — Optional Enhancements
 
-- [ ] **12. Dockerize UMI**
-- [ ] **13. Add CI for tests**
-- [ ] **14. Add coverage badge**
-- [ ] **15. Architecture diagrams**
+- [x] **12. Dockerize UMI**
+- [x] **13. Add CI for tests**
+- [x] **14. Add coverage badge**
+- [x] **15. Architecture diagrams**
 
 ---
 
