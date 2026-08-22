@@ -100,7 +100,7 @@
 
 ### P3 — Behavioral & Narrative
 
-- [ ] **12. Objective Language**
+- [x] **12. Objective Language**
   - "Winner — Best Internship Project 2025, Universidad Tecnológica de la Costa"
   - "Built a functional MVP tested by elementary-school students during the event"
   - Replace subjective claims with evidence
